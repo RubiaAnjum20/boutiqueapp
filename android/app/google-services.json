@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "458292319908",
+    "project_id": "boutique-4f036",
+    "storage_bucket": "boutique-4f036.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:458292319908:android:39c7c9f4f309284b11f831",
+        "android_client_info": {
+          "package_name": "com.example.boutiqueapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "458292319908-f9vdrdv08bqgs14tis7rujc84bd6ocua.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPbYHMCVLlUEYbBZrsqjQIWS6LiagaTjs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "458292319908-f9vdrdv08bqgs14tis7rujc84bd6ocua.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "458292319908-pcbt8nenhah4q6orrhm6kc52v3du6i6r.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.boutiqueapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
