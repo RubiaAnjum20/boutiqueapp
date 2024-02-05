@@ -100,8 +100,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                     signUpProvider.saveCredentials();
                                     _authServices.signUp(
                                         signUpProvider.emailcontroller.text,
-                                        signUpProvider.passcontroller.text,
                                         signUpProvider.namecontroller.text,
+                                        signUpProvider.passcontroller.text,
+                                        
                                         context);
                                   },
                                   title: 'Sign Up',

@@ -14,7 +14,7 @@ class UserAuthServices {
       UserCredential credential = await _auth.createUserWithEmailAndPassword(
           email: email, password: password);
       await _auth.currentUser!.updateDisplayName(name);
-      await _auth.currentUser!.updateEmail(email);
+      await _auth.currentUser!.verifyBeforeUpdateEmail(email);
       await FirestoreServices.saveUser(name, email, credential.user!.uid);
       ScaffoldMessenger.of(context)
           .showSnackBar(SnackBar(content: Text('Registration Successful')));
@@ -94,13 +94,9 @@ class UserAuthServices {
     await signUpWithEmailAndPassword(
         email, password, username, context);
  
-    // if (user != null) {
       print('User is succesfulyy created');
 
       AppNavigation.pushAndKillAll(routeName: AppNavRoutes.homeScreen);
-    // } else {
-    //   print('Some error happened');
-    // }
   }
 
   void LogIn(String email, String password, BuildContext context) async {
