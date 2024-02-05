@@ -25,8 +25,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:
-          Consumer<SignUpProvider>(builder: (context, signUpProvider, child) {
+      body: Consumer<SignUpProvider>(builder: (context, signUpProvider, child) {
         return SafeArea(
           child: Container(
             width: double.infinity,
@@ -92,7 +91,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 CustomTextFormField(
                                   controller: signUpProvider.passcontroller,
                                   hintText: 'Password',
-                                 obscureText: true,
+                                  obscureText: true,
                                   suffixWidget: Icon(Icons.remove_red_eye),
                                 ),
                                 Gap(6.h),
@@ -102,8 +101,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                     _authServices.signUp(
                                         signUpProvider.emailcontroller.text,
                                         signUpProvider.passcontroller.text,
-                                        signUpProvider.namecontroller.text, context);
-
+                                        signUpProvider.namecontroller.text,
+                                        context);
                                   },
                                   title: 'Sign Up',
                                   fontSize: 18.sp,
@@ -161,6 +160,4 @@ class _SignUpScreenState extends State<SignUpScreen> {
       }),
     );
   }
-
-  
 }

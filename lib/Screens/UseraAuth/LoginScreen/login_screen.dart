@@ -24,6 +24,11 @@ class _LoginScreenState extends State<LoginScreen> {
   final UserAuthServices _authServices = UserAuthServices();
 
   @override
+  void dispose() {
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Consumer<LoginProvider>(builder: (context, logInProvider, child) {
@@ -86,12 +91,14 @@ class _LoginScreenState extends State<LoginScreen> {
                               ),
                               Gap(5.h),
                               GestureDetector(
-                                onTap: () async{
+                                onTap: () async {
                                   print('Login Called');
-                                 
+
                                   logInProvider.saveCredentials();
-                                  _authServices.LogIn(logInProvider.emailcontroller.text,
-                                      logInProvider.passcontroller.text, context);
+                                  _authServices.LogIn(
+                                      logInProvider.emailcontroller.text,
+                                      logInProvider.passcontroller.text,
+                                      context);
                                 },
                                 child: Container(
                                   width: double.infinity,

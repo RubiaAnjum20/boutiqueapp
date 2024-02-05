@@ -14,16 +14,17 @@ class UserAuthServices {
       UserCredential credential = await _auth.createUserWithEmailAndPassword(
           email: email, password: password);
       await _auth.currentUser!.updateDisplayName(name);
-      await _auth.currentUser!.verifyBeforeUpdateEmail(email);
+      await _auth.currentUser!.updateEmail(email);
       await FirestoreServices.saveUser(name, email, credential.user!.uid);
       ScaffoldMessenger.of(context)
           .showSnackBar(SnackBar(content: Text('Registration Successful')));
       return credential.user;
     } on FirebaseAuthException catch (e) {
-      if (e.code == 'weak-password') {
-        ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text('Password Provided is too weak')));
-      } else if (e.code == 'email-already-in-use') {
+      // if (e.code == 'weak-password') {
+      //   ScaffoldMessenger.of(context).showSnackBar(
+      //       SnackBar(content: Text('Password Provided is too weak')));
+      // } else 
+      if (e.code == 'email-already-in-use') {
         ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(content: Text('Email Provided already Exists')));
       }
@@ -89,16 +90,17 @@ class UserAuthServices {
   }
 
   void signUp(String email, String username, String password, BuildContext context) async {
-    User? user = await signUpWithEmailAndPassword(
+    // User? user = 
+    await signUpWithEmailAndPassword(
         email, password, username, context);
-
-    if (user != null) {
+ 
+    // if (user != null) {
       print('User is succesfulyy created');
 
       AppNavigation.pushAndKillAll(routeName: AppNavRoutes.homeScreen);
-    } else {
-      print('Some error happened');
-    }
+    // } else {
+    //   print('Some error happened');
+    // }
   }
 
   void LogIn(String email, String password, BuildContext context) async {
