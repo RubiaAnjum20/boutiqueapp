@@ -1,11 +1,13 @@
-import 'package:boutiqueapp/Model/product.dart';
+import 'package:boutiqueapp/Model/product_model.dart';
 import 'package:boutiqueapp/Utils/app_constants.dart';
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class ProductTitleWithImage extends StatelessWidget {
   const ProductTitleWithImage({super.key, required this.product});
 
-  final Product product;
+  final ProductModel product;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -13,7 +15,7 @@ class ProductTitleWithImage extends StatelessWidget {
           const EdgeInsets.symmetric(horizontal: AppConstants.kDefaultPadding),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
+        children: [
           Text(
             product.title,
             style: Theme.of(context)
@@ -23,7 +25,7 @@ class ProductTitleWithImage extends StatelessWidget {
           ),
           SizedBox(height: AppConstants.kDefaultPadding),
           Row(
-            children: <Widget>[
+            children: [
               RichText(
                 text: TextSpan(
                   children: [
@@ -39,13 +41,13 @@ class ProductTitleWithImage extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(width: AppConstants.kDefaultPadding),
+              Gap(3.h),
               Expanded(
                 child: Hero(
                   tag: "${product.id}",
                   child: Image.asset(
                     product.image,
-                    fit: BoxFit.fill,
+                    //fit: BoxFit.fill,
                   ),
                 ),
               )

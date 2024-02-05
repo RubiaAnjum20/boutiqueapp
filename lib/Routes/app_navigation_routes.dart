@@ -5,6 +5,9 @@ class AppNavRoutes {
   static const splashScreen = '/splashScreen';
   static const loginScreen = '/loginScreen';
   static const signUpScreen = '/signUpScreen';
-  static const homePageScreen = '/homePageScreen';
   static const homeScreen = '/homeScreen';
+  static const mainScreen = '/mainScreen';
+  static const myProfile = '/myProfile';
+  static const search = '/search';
+  static const reviewCartScreen = '/reviewCartScreen';
 }

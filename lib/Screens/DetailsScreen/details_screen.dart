@@ -3,7 +3,7 @@ import 'package:boutiqueapp/Components/ColorAndSize/color_and_size.dart';
 import 'package:boutiqueapp/Components/CounterWithFavButton/counter_with_fav_btn.dart';
 import 'package:boutiqueapp/Components/Description/description.dart';
 import 'package:boutiqueapp/Components/ProductWithTitleImage/product_title_with_image.dart';
-import 'package:boutiqueapp/Model/product.dart';
+import 'package:boutiqueapp/Model/product_model.dart';
 import 'package:boutiqueapp/Utils/app_colors.dart';
 import 'package:boutiqueapp/Utils/app_constants.dart';
 import 'package:flutter/material.dart';
@@ -13,16 +13,16 @@ import 'package:flutter_svg/svg.dart';
 class DetailsScreen extends StatelessWidget {
   const DetailsScreen({super.key, required this.product});
 
-  final Product product;
+  final ProductModel product;
 
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return Scaffold(
       // each product have a color
-      backgroundColor: AppColors.lightPinkColor,
+      backgroundColor: AppColors.peachColor,
       appBar: AppBar(
-        backgroundColor: product.color,
+        backgroundColor: AppColors.greenColor,
         elevation: 0,
         leading: IconButton(
           icon: SvgPicture.asset(

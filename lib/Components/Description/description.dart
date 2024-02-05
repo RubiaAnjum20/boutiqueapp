@@ -1,4 +1,4 @@
-import 'package:boutiqueapp/Model/product.dart';
+import 'package:boutiqueapp/Model/product_model.dart';
 import 'package:boutiqueapp/Utils/app_constants.dart';
 import 'package:flutter/material.dart';
 
@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 class Description extends StatelessWidget {
   const Description({super.key, required this.product});
 
-  final Product product;
+  final ProductModel product;
   @override
   Widget build(BuildContext context) {
     return Padding(

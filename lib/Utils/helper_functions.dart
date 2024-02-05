@@ -1,6 +1,6 @@
 import 'dart:convert';
-
 class HelperFunction {
+
   static String? utf8TextParsing(String? val) {
     if (val == null) return "";
     try {
@@ -10,4 +10,6 @@ class HelperFunction {
       return val;
     }
   }
+
+  
 }

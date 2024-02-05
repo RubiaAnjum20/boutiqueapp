@@ -1,6 +1,7 @@
 import 'package:boutiqueapp/Routes/app_navigation.dart';
 import 'package:boutiqueapp/Routes/app_navigation_routes.dart';
-import 'package:flutter/foundation.dart';
+import 'package:boutiqueapp/Utils/app_colors.dart';
+import 'package:boutiqueapp/Utils/app_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -24,26 +25,18 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Anjum\'s Boutique',
-          style: TextStyle(
-              color: Colors.blue, fontWeight: FontWeight.bold, fontSize: 30),
-        ),
-      ),
       body: Container(
         decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage('assets/images/1_21_36.jpg'))),
-        // child: Column(
-        //   children: [
-        //     // Image.asset('assets/images/1_21_36.jpg'),
-        //     // ElevatedButton(
-        //     //   onPressed: (){
-        //     //     AppNavigation.navigateTo(routeName: AppNavRoutes.loginScreen);
-        //     //   }, child: Text('Login'))
-        //   ],
-        // )
+            gradient: AppColors.kPrimaryGradient
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Image.asset('${AppConstants.assetImages}logo.png')
+                  ],
+                ),
+        
       ),
     );
   }

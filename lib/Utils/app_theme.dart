@@ -21,7 +21,8 @@ class AppThemes {
   //Display: 12,10,8
 
   static final lightTheme = ThemeData(
-    primaryColor: AppColors.magentaColor,
+    brightness: Brightness.light,
+    primaryColor: AppColors.lightGreenColor,
     appBarTheme: const AppBarTheme(
       elevation: 2,
       backgroundColor: AppColors.pinkColor,
@@ -110,12 +111,14 @@ class AppThemes {
   );
 
   static final darkTheme = ThemeData(
-      scaffoldBackgroundColor: Colors.white70,
+    brightness: Brightness.dark,
+    primaryColor: AppColors.peachColor,
+      scaffoldBackgroundColor: AppColors.magentaColor,
       fontFamily: 'Aviner',
       textTheme: const TextTheme(
-          titleLarge: TextStyle(color: Colors.purpleAccent),
-          bodyLarge: TextStyle(color: Colors.green),
-          bodyMedium: TextStyle(color: Colors.brown)),
+          titleLarge: TextStyle(color: Colors.white),
+          bodyLarge: TextStyle(color: Colors.white),
+          bodyMedium: TextStyle(color: Colors.white)),
       inputDecorationTheme: const InputDecorationTheme(
           focusedErrorBorder: OutlineInputBorder(
               borderSide: BorderSide(width: 2, color: Colors.red)),

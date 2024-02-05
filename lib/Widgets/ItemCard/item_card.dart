@@ -1,4 +1,4 @@
-import 'package:boutiqueapp/Model/product.dart';
+import 'package:boutiqueapp/Model/product_model.dart';
 import 'package:boutiqueapp/Utils/app_colors.dart';
 import 'package:boutiqueapp/Utils/app_constants.dart';
 import 'package:flutter/material.dart';
@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 class ItemCard extends StatelessWidget {
   const ItemCard({super.key, required this.product, required this.press});
 
-  final Product product;
+  final ProductModel product;
   final VoidCallback press;
 
   @override
